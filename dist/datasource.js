@@ -54,12 +54,20 @@ System.register(['lodash'], function (_export, _context) {
         _createClass(GenericDatasource, [{
           key: 'query',
           value: function query(options) {
+            console.log('query called');
+            console.log('options is --');
+            console.log(options);
             var query = this.buildQueryParameters(options);
+            console.log("query after buildQueryParameters -- ");
+            console.log(query);
             query.targets = query.targets.filter(function (t) {
               return !t.hide;
             });
+            console.log("query after query.targets filter on not t.hide -- ");
+            console.log(query);
 
             if (query.targets.length <= 0) {
+              console.log("In the if where query.targets.length is 0");
               return this.q.when({ data: [] });
             }
 
@@ -67,6 +75,10 @@ System.register(['lodash'], function (_export, _context) {
               url: this.url + '/query',
               data: query,
               method: 'POST'
+            }).then(function (result) {
+              console.log("Here's the result from backend server ---------");
+              console.log(result);
+              return result;
             });
           }
         }, {
