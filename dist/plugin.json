@@ -1,6 +1,6 @@
 {
-  "name": "SimpleJson",
-  "id": "grafana-simple-json-datasource",
+  "name": "Experiment",
+  "id": "Experiment",
   "type": "datasource",
 
   "partials": {
@@ -8,24 +8,16 @@
   },
 
   "metrics": true,
-  "annotations": true,
+  "annotations": false,
 
   "info": {
-    "description": "simple json datasource",
+    "description": "Experimental datasource",
     "author": {
       "name": "Grafana Labs",
       "url": "https://grafana.com"
     },
-    "logos": {
-      "small": "img/simpleJson_logo.svg",
-      "large": "img/simpleJson_logo.svg"
-    },
-    "links": [
-      {"name": "GitHub", "url": "https://github.com/grafana/simple-json-datasource"},
-      {"name": "MIT License", "url": "https://github.com/grafana/simple-json-datasource/blob/master/LICENSE"}
-    ],
-    "version": "1.3.4",
-    "updated": "2017-05-10"
+    "version": "0.0.1",
+    "updated": "2017-09-15"
   },
 
   "dependencies": {

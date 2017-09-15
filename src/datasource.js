@@ -33,7 +33,7 @@ export class GenericDatasource {
     }
 
     return this.doRequest({
-      url: this.url + '/query',
+      url: this.url + '/render',
       data: query,
       method: 'POST'
     }).then(result => {
@@ -83,7 +83,7 @@ export class GenericDatasource {
     };
 
     return this.doRequest({
-      url: this.url + '/search',
+      url: this.url + '/metrics/find',
       data: interpolated,
       method: 'POST',
     }).then(this.mapToTextValue);

@@ -72,7 +72,7 @@ System.register(['lodash'], function (_export, _context) {
             }
 
             return this.doRequest({
-              url: this.url + '/query',
+              url: this.url + '/render',
               data: query,
               method: 'POST'
             }).then(function (result) {
@@ -125,7 +125,7 @@ System.register(['lodash'], function (_export, _context) {
             };
 
             return this.doRequest({
-              url: this.url + '/search',
+              url: this.url + '/metrics/find',
               data: interpolated,
               method: 'POST'
             }).then(this.mapToTextValue);
